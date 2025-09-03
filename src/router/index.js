@@ -56,6 +56,11 @@ function customLayoutResolver (route) {
   return undefined
 }
 
+// | 模式                     | URL 形式     | SEO 友善 | 需要伺服器支援 | 適合用途           |
+// | ---------------------- | ---------- | ------ | ------- | -------------- |
+// | `createWebHistory`     | `/about`   | ✅ 是    | ✅ 是     | 正式專案、公開網站      |
+// | `createWebHashHistory` | `/#/about` | ❌ 否    | ❌ 否     | 原型設計、內部工具、簡單專案 |
+
 // 自動引入，全部都放pages
 const router = createRouter({
   history: createWebHashHistory(import.meta.env.BASE_URL),
