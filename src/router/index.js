@@ -8,7 +8,7 @@
 
 import { setupLayouts } from 'virtual:generated-layouts'
 // eslint-disable-next-line import/no-duplicates
-import { createRouter, createWebHistory, START_LOCATION } from 'vue-router/auto'
+import { createRouter, createWebHashHistory, START_LOCATION } from 'vue-router/auto'
 // eslint-disable-next-line import/no-duplicates
 import { routes } from 'vue-router/auto-routes'
 import userService from '@/services/user'
@@ -58,7 +58,7 @@ function customLayoutResolver (route) {
 
 // 自動引入，全部都放pages
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHashHistory(import.meta.env.BASE_URL),
   routes: setupLayouts(routes, customLayoutResolver),
   // 自動路由
   // 自動添加 admin 路徑(上面的 customLayoutResolver )
