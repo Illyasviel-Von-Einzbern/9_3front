@@ -1,0 +1,16 @@
+npm create vuetify@latest
+npm i vee-validate yup validator
+npm i axios
+npm i vuetify-use-dialog
+npm i pinia-plugin-persistedstate
+npm i multer multer-storage-cloudinary
+npm install @komgrip/vue-file-agent-next  
+npm un @komgrip/vue-file-agent-next
+npm i @boindil/vue-file-agent-next
+
+npm i swiper
+npm i gsap
+npm i live2dcubismcore
+npm i pixi.js
+npm i pixi-live2d-display
+npm i xlsx
