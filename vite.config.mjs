@@ -13,8 +13,14 @@ import Layouts from 'vite-plugin-vue-layouts-next'
 import Vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 
 // https://vitejs.dev/config/
+// | base 設定              | 使用場景                      | 風險                 |
+// | -------------------- | ------------------------- | ------------------ |
+// | `base: '/'`          | 根目錄部署（GitHub Pages 沒子資料夾） | 只有根目錄部署適用          |
+// | `base: '/9_3front/'` | GitHub Pages 子資料夾部署（你的情況） | 最穩定，資源路徑正確         |
+// | `base: './'`         | 相對路徑部署（某些情況可用，但有風險）       | SPA 或多層路由時資源易錯誤404 |
+
 export default defineConfig({
-  base: './',
+  base: '/9_3front/',
   plugins: [
     VueRouter(),
     Layouts(),
