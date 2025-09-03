@@ -1,5 +1,5 @@
 import { defineStore } from 'pinia'
-import { create as createOrderApi } from '../services/order'
+import orderApi from '../services/order'
 
 export const useOrderStore = defineStore('order', {
   state: () => ({
@@ -12,7 +12,7 @@ export const useOrderStore = defineStore('order', {
       this.loading = true
       this.error = ''
       try {
-        const res = await createOrderApi(payload)
+        const res = await orderApi.create(payload)
         this.orderResult = res.data
       } catch (error) {
         this.error = error.response?.data?.message || '下單失敗'
