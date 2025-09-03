@@ -126,7 +126,7 @@
       autoStart: true,
     })
 
-    const model = await Live2DModel.from('/model/wanko.model.json')
+    const model = await Live2DModel.from('./model/wanko.model.json')
     // 關閉 Live2D 模型互動的 pointer events（最穩定），防止 PIXI 嘗試處理 hover/click 導致錯誤
     model.interactive = false
     model.interactiveChildren = false
