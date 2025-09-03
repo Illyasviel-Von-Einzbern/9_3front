@@ -20,7 +20,7 @@ import Vuetify, { transformAssetUrls } from 'vite-plugin-vuetify'
 // | `base: './'`         | 相對路徑部署（某些情況可用，但有風險）       | SPA 或多層路由時資源易錯誤404 |
 
 export default defineConfig({
-  base: '/9_3front/',
+  base: './',
   plugins: [
     VueRouter(),
     Layouts(),

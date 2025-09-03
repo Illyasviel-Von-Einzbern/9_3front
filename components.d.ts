@@ -9,7 +9,6 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     BusinessHours: typeof import('./src/components/BusinessHours.vue')['default']
-    Live2D: typeof import('./src/components/Live2D.vue')['default']
     MenuEditor: typeof import('./src/components/MenuEditor.vue')['default']
     ProductCard: typeof import('./src/components/ProductCard.vue')['default']
     RestaurantCard: typeof import('./src/components/RestaurantCard.vue')['default']
